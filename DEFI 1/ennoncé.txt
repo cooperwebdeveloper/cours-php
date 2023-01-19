@@ -1,0 +1,16 @@
+Pendant le développement d'un projet informatique, il est important d'avoir des outils permettant de suivre l’exécution du code et de conserver ces informations. Cela permet, en cas de dysfonctionnement, de récupérer les informations et d'avoir une vision plus claire de ce qui a provoqué l'erreur.
+
+Une manière de faire ça est d'utiliser un logger ("Journaliseur", en français) qui va créer des logs ("Journaux") sous la forme de fichiers textes retraçant un événement et notifiant leur date. Dans ce défi, vous allez devoir créer votre propre logger.
+
+QUESTION:
+Créez une classe Logger qui va permettre d'insérer des messages dans des fichiers textes. Chaque fichier de log aura pour nom la date du jour (au format AAAA-MM-JJ) avec, pour extension, .log.
+
+La classe Logger devra donc créer le fichier s'il n'existe pas et proposer une méthode log() permettant d'écrire une ligne dans ce fichier : le message sera passé en paramètre, mais la date devra être ajoutée à la volée.
+
+Attention : pour des raisons de performance, il est préférable d'ouvrir le fichier au début et de le refermer à la fin du script, plutôt que de l'ouvrir et le refermer à chaque insertion.
+
+Lorsque le Logger est créé, il doit créer automatiquement un message "Ouverture des logs", et un message "Fermeture des logs" doit être créé à la fin du script : cela permet de séparer les appels d'une même journée.
+
+Une fois votre Logger créé, instanciez-le et créez un message de log de test. Assurez-vous qu'il soit bien placé entre les deux messages d'ouverture et de fermeture.
+
+Note : le type "resource", qui est utilisé pour manipuler des fichiers ou des connexions, n'est pas un "vrai" type et ne peut pas être utilisé pour typer des variables. Exceptionnellement, vous aurez le droit de ne pas typer votre propriété.
